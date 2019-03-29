@@ -1,19 +1,77 @@
 var myRec = new p5.SpeechRec('da'); // nyt speech rec objekt, som genkender danske ord
 
 let commands = [{
-		"rektor": ["rektor", "regtor", "actor"]
+		"rektor" : ["rektor", "rejser", "actor"]
 	},
 	{
-		"kantine": ["kantine", "canteen"]
+		"studieadmin" : ["studieadministration", "studieadministrationen"]
 	},
+	{
+		"vrlab" : ["vr-lab", "vr lab", "vr lap", "vi er lab"]
+	},
+	{
+		"innolab" : ["innolab", "inno lab"]
+	},
+	{
+		"f11t18" : ["11", "12", "13", "14", "15", "16", "17", "18"]
+	},
+	{
+		"f21t25" : ["21", "22", "23", "24", "25"]
+	},
+	{
+		"f31t32" : ["31", "32"]
+	},
+	{
+		"f43t45" : ["43", "44", "45"]
+	},
+	{
+		"f46t50" : ["46", "47", "48", "49", "50"]
+	},
+	{
+		"f51t54" : ["51", "52", "53", "54"]
+	},
+	{
+		"f60t63" : ["60", "61", "62", "63"]
+	},
+	{
+		"proces" : ["proces", "process", "prosa", "protest"]
+	},
+	{
+		"teori" : ["teori"]
+	},
+	{
+		"biokemi" : ["biokemi"]
+	},
+	{
+		"fysik" : ["fysik"]
+	},
+	{
+		"printer" : ["print", "printe", "printer", "printeren", "printere", "printerne"]
+	},
+	{
+		"bibliotek" : ["bibliotek", "biblioteket"]
+	},
+	{
+		"teknologi" : ["teknologi"]
+	},
+	{
+		"byg" : ["byg", "Byg", "by"]
+	},
+	{
+		"musik" : ["musik"]
+	},
+	{
+		"kantine" : ["kantine", "sydsal", "syd sal"]
+	},
+	{
+		"nordsal" : ["nordsal", "nord sal"]
+	}
 ];
 
 let resultDiv;
 
 function setup() {
-	// default canvas setup
 	noCanvas();
-	// viser de(t) genkendte ord
 	myRec.continuous = true;
 	myRec.interimResults = true;
 	myRec.onResult = showResult;
@@ -24,7 +82,6 @@ function setup() {
 
 function draw() {}
 
-// viser de(t) genkendte ord
 function showResult() {
 	if (myRec.resultValue == true) {
 		$("#speech").html(myRec.resultString);
