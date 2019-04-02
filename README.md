@@ -1,16 +1,3 @@
----
-title: Manual til Den Talende Infoskærm
-author: Bjarke, Jasper, Julius Westmann, Noah
-affiliation: Slotshaven Gymnasium
-date: 02-04-2019
-titlepage: true
-toc: true
-lang: danish
-numbersections: true
-...
-
-\newpage
-
 # Setup af Raspberry Pi
 
 # Setup af Stemmegenkendelse
