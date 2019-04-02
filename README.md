@@ -1,10 +1,12 @@
-# Setup af Raspberry Pi
+# Manual til Den Talende Infoskærm
 
-# Setup af Stemmegenkendelse
+## Setup af Raspberry Pi
 
-# Brug af programmet
+## Setup af Stemmegenkendelse
 
-## Kommandoer
+## Brug af programmet
+
+### Kommandoer
 
 Programmet understøtter de følgende kommandoer:
 
