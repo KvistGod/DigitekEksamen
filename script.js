@@ -1,6 +1,6 @@
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
-var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
 var recognition = new SpeechRecognition();
 
@@ -76,23 +76,27 @@ recognition.lang = 'da';
 recognition.continuous = true;
 recognition.interimResults = true;
 
-recognition.start();
-recognition.onspeechend = function () {
+$(document).ready(function () {
     recognition.start();
-}
-$(".command-card").hide();
+    recognition.onspeechend = function () {
+        recognition.start();
+    }
+    $(".command-card").hide();
 
-let resultDiv;
+    let resultDiv;
 
-recognition.onresult = function (event) {
-    $("#speech").html(recognition.SpeechRecognitionResultList);
-    for (e of commands) {
-        for (k of Object.values(e)[0]) {
-            if(recognition.SpeechRecognitionResultList.includes(k)) {
-                console.log("Fandt ord: " + Object.keys(e));
-                divName = Object.keys(e);
-                $("#content").html($("#" + divName).clone().show());
+    recognition.onresult = function (event) {
+        $("#speech").html(event.results[0][0].transcript);
+        for (e of commands) {
+            for (k of Object.values(e)[0]) {
+                if (event.results[0][0].transcript.includes(k)) {
+                    console.log("Fandt ord: " + Object.keys(e));
+                    divName = Object.keys(e);
+                    $("#content").html($("#" + divName).clone().show());
+                }
             }
         }
+
     }
-}
+
+});
