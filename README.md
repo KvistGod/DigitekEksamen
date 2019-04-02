@@ -22,3 +22,5 @@ Programmet understøtter de følgende kommandoer:
 - "Byg" \- Viser vej til Byg lokalet
 - "Musik" \- Viser vej til Musiklokalet
 - "Kantinen" \- Viser vej til Kantinen
+
+Derudover understøtter programmet navnene på alle klasselokalerne. Siger man fx "Lokale 62", vil man blive ledt til 60'er gangen, hvor lokale 62 kan findes.
