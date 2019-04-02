@@ -83,8 +83,6 @@ $(document).ready(function () {
     }
     $(".command-card").hide();
 
-    let resultDiv;
-
     recognition.onresult = function (event) {
         $("#speech").html(event.results[0][0].transcript);
         for (e of commands) {
