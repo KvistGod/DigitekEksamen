@@ -11,7 +11,7 @@ For at sætte Raspberry Pien op skal du bruge:
 
 Følgende instruktioner beskriver hvordan Raspberry Pien sættes op:
 
-1. Indsæt SD-kortet den rette indgang på Raspbery Pien.
+1. Indsæt SD-kortet i den rette indgang på Raspbery Pien.
 2. Indsæt HDMI kabel.
 3. Indsæt USB kabel til tastatur og mus.
 4. Indsæt strømkabel - Raspberry Pien vil nu starte
