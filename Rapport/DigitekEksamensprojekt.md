@@ -6,7 +6,7 @@ titlepage: true
 toc: true
 toc-title: Indholdsfortegnelse
 lang: da
-csl: ~/Documents/apa.csl
+csl: apa.csl
 bibliography: digitek.bib
 nocite: |
     @*
