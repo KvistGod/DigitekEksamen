@@ -4,7 +4,11 @@ author: Bjarke, Jasper, Julius Westmann & Noah
 date: 13-05-2019
 titlepage: true
 toc: true
-lang: danish
+lang: da
+csl: C:\\Users\\Bjarke\\Documents\\apa.csl
+bibliography: digitek.bib
+nocite: |
+    @*
 ...
 
 \newpage
