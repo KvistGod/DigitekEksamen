@@ -61,7 +61,7 @@ stort set alle kender er ‘Siri’, som er udviklet af Apple, og ‘Google
 Assistant’, som er udviklet af Google. Billedet herunder til venstre viser
 ‘Siri’, og billedet herunder til højre viser ‘Google Assistant’.
 
-![](../Billeder/Siri.png)\ ![](../Billeder/GoogleAssistant.png)
+![](../Billeder/Siri.png){ width=30% }\ ![](../Billeder/GoogleAssistant.png){ width=70% }
 
 En anden populær device som understøtter stemmegenkendelse er ‘Amazon Echo’ som
 er udviklet af Amazon. Denne device er beregnet til at blive brugt i private
