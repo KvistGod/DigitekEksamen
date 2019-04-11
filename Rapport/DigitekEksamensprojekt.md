@@ -241,9 +241,9 @@ havde fundet lokalet, havde han aldrig valgt HTX.
 
 ### Mockup
 
-![](../Billeder/Mockup.png)
+![](../Billeder/Mockup.png){ width=50% }
 
-![](../Billeder/Mockup2.png)
+![](../Billeder/Mockup2.png){ width=50% }
 
 Som billederne ovenover viser, så vil skærmen vise en besked hvorpå der fx står
 “Hvor skal du hen? Sig f.eks “Hvor er rektors kontor”, og så vil jeg vise dig
