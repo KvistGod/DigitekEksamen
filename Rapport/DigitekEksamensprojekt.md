@@ -39,9 +39,7 @@ så godt som en 2.g’er eller en 3.g’er gør.
 ## Tematik
 
 Titel: Den Talende Infoskærm
-
 Slogan: “Find din vej”
-
 Tematik: Talende/hjælpe teknologi.
 
 ### Stemmegenkendelse
