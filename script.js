@@ -78,32 +78,32 @@ recognition.continuous = false;
 recognition.interimResults = false;
 
 function cardTimer() {
-    console.log("Timer starter...");
+    console.log("- Timer starter");
     window.setTimeout(restartRec, 5000);
 }
 function restartRec() {
-    console.log("Lytter igen...");
+    console.log("- Speech restart");
     recognition.start();
 }
 
 $(document).ready(function () {
     recognition.start();
     recognition.onsoundstart = function () {
-        console.log("Yeah, you heard me...");
+        console.log("- Sound detected");
     }
     recognition.onspeechend = function () {
-        console.log("Speech end.");
+        console.log("- Speech end");
         cardTimer();
     }
 
     $(".command-card").hide();
 
     recognition.onresult = function (event) {
-        $("#speech").html(event.results[0][0].transcript);
+        console.log("Transcript: " + event.results[0][0].transcript);
         for (e of commands) {
             for (k of Object.values(e)[0]) {
                 if (event.results[0][0].transcript.includes(k)) {
-                    console.log("Fandt ord: " + Object.keys(e));
+                    console.log("Keyword: " + Object.keys(e));
                     divName = Object.keys(e);
                     $("#content").html($("#" + divName).clone().show());
                 }
