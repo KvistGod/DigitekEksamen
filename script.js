@@ -77,6 +77,10 @@ recognition.lang = 'da';
 recognition.continuous = false;
 recognition.interimResults = false;
 
+function hideCards() {
+    $(".command-card").hide();
+}
+
 function cardTimer() {
     console.log("- Timer starter");
     window.setTimeout(restartRec, 5000);
@@ -87,16 +91,16 @@ function restartRec() {
 }
 
 $(document).ready(function () {
-    recognition.start();
-    recognition.onsoundstart = function () {
-        console.log("- Sound detected");
-    }
-    recognition.onspeechend = function () {
-        console.log("- Speech end");
-        cardTimer();
-    }
+    hideCards();
 
-    $(".command-card").hide();
+    document.getElementById("recbutton").onclick = function () {recognition.start()};
+
+    recognition.onaudiostart = function () {
+        document.getElementById("recbutton").innerHTML = "Lytter...";
+    }
+    recognition.onaudioend = function () {
+        document.getElementById("recbutton").innerHTML = "Spørg om vej"
+    }
 
     recognition.onresult = function (event) {
         console.log("Transcript: " + event.results[0][0].transcript);
@@ -106,6 +110,7 @@ $(document).ready(function () {
                     console.log("Keyword: " + Object.keys(e));
                     divName = Object.keys(e);
                     $("#content").html($("#" + divName).clone().show());
+                    window.setTimeout(hideCards, 5000);
                 }
             }
         }
