@@ -66,10 +66,10 @@ let commands = [
         "musik": ["musik"]
     },
     {
-        "kantine": ["kantine", "sydsal", "syd sal"]
+        "kantine": ["syd", "kantine", "sydsal", "syd sal"]
     },
     {
-        "nordsal": ["nordsal", "nord sal"]
+        "nordsal": ["nord", "nordsal", "nord sal"]
     }
 ];
 
@@ -81,16 +81,12 @@ function hideCards() {
     $(".command-card").hide();
 }
 
-function cardTimer() {
-    console.log("- Timer starter");
-    window.setTimeout(restartRec, 5000);
-}
-function restartRec() {
-    console.log("- Speech restart");
-    recognition.start();
-}
-
 $(document).ready(function () {
+
+    var timeLeft;
+    var elem = document.getElementById('some_div');
+    var timerId = setInterval(countdown, 1000);
+
     hideCards();
 
     document.getElementById("recbutton").onclick = function () {recognition.start()};
@@ -102,6 +98,17 @@ $(document).ready(function () {
         document.getElementById("recbutton").innerHTML = "Spørg om vej"
     }
 
+    function countdown() {
+        if (timeLeft == 0) {
+            clearTimeout(timerId);
+            hideCards();
+            elem.innerHTML = '';
+        } else if (timeLeft > 0) {
+            elem.innerHTML = timeLeft + ' seconds remaining';
+            timeLeft--;
+        }
+    }
+
     recognition.onresult = function (event) {
         console.log("Transcript: " + event.results[0][0].transcript);
         for (e of commands) {
@@ -110,7 +117,8 @@ $(document).ready(function () {
                     console.log("Keyword: " + Object.keys(e));
                     divName = Object.keys(e);
                     $("#content").html($("#" + divName).clone().show());
-                    window.setTimeout(hideCards, 5000);
+                    timeLeft = 5;
+                    countdown();
                 }
             }
         }
