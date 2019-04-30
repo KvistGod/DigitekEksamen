@@ -103,7 +103,7 @@ $(document).ready(function () {
             clearTimeout(timerId);
             hideCards();
             elem.innerHTML = '';
-            console.log("nedtælling færdig" + timeLeft);
+            console.log(timerId);
         } else if (timeLeft > 0) {
             elem.innerHTML = timeLeft + ' seconds remaining';
             timeLeft--;
