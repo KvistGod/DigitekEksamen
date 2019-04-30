@@ -116,7 +116,7 @@ $(document).ready(function () {
         for (e of commands) {
             for (k of Object.values(e)[0]) {
                 if (event.results[0][0].transcript.includes(k)) {
-                    console.log(": " + Object.keys(e));
+                    console.log("Keyword: " + Object.keys(e));
                     divName = Object.keys(e);
                     $("#content").html($("#" + divName).clone().show());
                     timeLeft = 5;
