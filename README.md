@@ -22,7 +22,7 @@ Følgende instruktioner beskriver hvordan stemmegenkendelsen sættes op på Rasp
 
 ## Brug af programmet
 
-Programmet fungerer via stemmeinput. Der er hardcoded forskellige kommandoer, som gør forskellige ting. Programmet understøtter de følgende kommandoer:
+Programmet fungerer via stemmeinput. Der er hardcoded forskellige kommandoer, som giver forskellige resultater. Programmet understøtter følgende kommandoer:
 
 |         Kommando         |                        Resultat                        |
 |:------------------------:|:------------------------------------------------------:|
@@ -41,4 +41,4 @@ Programmet fungerer via stemmeinput. Der er hardcoded forskellige kommandoer, so
 |          "Musik"         | Viser vej til Musiklokalet                             |
 |        "Kantinen"        | Viser vej til Kantinen                                 |
 
-Derudover understøtter programmet navnene på alle klasselokalerne. Siger man fx "Lokale 62", vil man blive ledt til 60'er gangen, hvor lokale 62 kan findes.
+Programmet understøttter derudover navnene på alle klasselokalerne. Siger man fx "Lokale 62", vil man blive ledt til 60'er gangen, hvor lokale 62 kan findes.
