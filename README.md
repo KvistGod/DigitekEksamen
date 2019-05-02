@@ -2,19 +2,19 @@
 
 ## Setup af Raspberry Pi
 
-For at sætte Raspberry Pien op skal du bruge:
+For at sætte Raspberry Pien op skal du bruge disse følgende ting:
 
 1. Et HDMI kabel
 2. Et tastatur
 3. En mus
-4. En computer
+4. En skærm hvorpå programmet kan vises
 
-Følgende instruktioner beskriver hvordan Raspberry Pien sættes op:
+Følgende instruktioner beskriver hvordan Raspberry Pien startes op:
 
 1. Indsæt SD-kortet i den rette indgang på Raspbery Pien.
-2. Indsæt HDMI kabel.
-3. Indsæt USB kabel til tastatur og mus.
-4. Indsæt strømkabel - Raspberry Pien vil nu starte
+2. Indsæt HDMI kablet.
+3. Indsæt USB kabler til tastatur og mus.
+4. Indsæt strømkabelet - Raspberry Pien vil nu tænde.
 
 ## Setup af Stemmegenkendelse
 
@@ -22,9 +22,7 @@ Følgende instruktioner beskriver hvordan stemmegenkendelsen sættes op på Rasp
 
 ## Brug af programmet
 
-### Kommandoer
-
-Programmet understøtter de følgende kommandoer:
+Programmet fungerer via stemmeinput. Der er hardcoded forskellige kommandoer, som giver forskellige resultater. Programmet understøtter følgende kommandoer:
 
 |         Kommando         |                        Resultat                        |
 |:------------------------:|:------------------------------------------------------:|
@@ -43,4 +41,4 @@ Programmet understøtter de følgende kommandoer:
 |          "Musik"         | Viser vej til Musiklokalet                             |
 |        "Kantinen"        | Viser vej til Kantinen                                 |
 
-Derudover understøtter programmet navnene på alle klasselokalerne. Siger man fx "Lokale 62", vil man blive ledt til 60'er gangen, hvor lokale 62 kan findes.
+Programmet understøttter derudover navnene på alle klasselokalerne. Siger man fx "Lokale 62", vil man blive ledt til 60'er gangen, hvor lokale 62 kan findes.

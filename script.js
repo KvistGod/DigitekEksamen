@@ -104,9 +104,11 @@ $(document).ready(function () {
             // clearTimeout(timerId);
             hideCards();
             elem.innerHTML = '';
+            console.log(timerId);
         } else if (timeLeft > 0) {
             elem.innerHTML = timeLeft + ' seconds remaining';
             timeLeft--;
+            console.log("nedtælling begyndt: " + timeLeft);
         }
     }
 
@@ -119,6 +121,7 @@ $(document).ready(function () {
                     divName = Object.keys(e);
                     $("#content").html($("#" + divName).clone().show());
                     timeLeft = 5;
+                    console.log("begynder nedtælling: " + timeLeft);
                     countdown();
                 }
             }
