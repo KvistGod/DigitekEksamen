@@ -1,0 +1,3 @@
+Længde 	= 9 cm
+Bredde 	= 7 cm
+Højde 	= 2.5 cm
