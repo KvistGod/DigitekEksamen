@@ -99,8 +99,9 @@ $(document).ready(function () {
     }
 
     function countdown() {
+        console.log("skrt");
         if (timeLeft == 0) {
-            clearTimeout(timerId);
+            // clearTimeout(timerId);
             hideCards();
             elem.innerHTML = '';
         } else if (timeLeft > 0) {
