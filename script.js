@@ -118,9 +118,11 @@ $(document).ready(function () {
                     console.log("Keyword: " + Object.keys(e));
                     divName = Object.keys(e);
                     $("#content").html($("#" + divName).clone().show());
-                    timeLeft = 5;
+                    timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
                     countdown();
+                } else {
+                    elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
                 }
             }
         }
