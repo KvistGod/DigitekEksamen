@@ -99,12 +99,10 @@ $(document).ready(function () {
     }
 
     function countdown() {
-        console.log("skrt");
         if (timeLeft == 0) {
             // clearTimeout(timerId);
             hideCards();
             elem.innerHTML = '';
-            console.log(timerId);
         } else if (timeLeft > 0) {
             elem.innerHTML = timeLeft + ' seconds remaining';
             timeLeft--;
@@ -116,7 +114,7 @@ $(document).ready(function () {
         console.log("Transcript: " + event.results[0][0].transcript);
         for (e of commands) {
             for (k of Object.values(e)[0]) {
-                if (event.results[0][0].transcript.includes(k)) {
+                if (event.results[0][0].transcript.toLowerCase().includes(k)) {
                     console.log("Keyword: " + Object.keys(e));
                     divName = Object.keys(e);
                     $("#content").html($("#" + divName).clone().show());
