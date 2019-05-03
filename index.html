@@ -15,13 +15,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
-<body class="orange darken-3">
-
-    <div id="some_div"></div>
+<body style="background-color: #ff4800">
 
     <div class="container">
-        <a class="waves-effect waves-light btn-large blue-grey darken-4" id="recbutton">Spørg om vej</a>
-        <div id="content"></div>
+        <div id="maps"></div>
+        <div id="cards"></div>
+        <a class="waves-effect waves-light btn-large blue-grey darken-3" id="recbutton">Spørg om vej</a>
     </div>
 
     <div>
@@ -30,7 +29,7 @@
 
     <div class="command-card" id="rektor" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
+            <div class="card blue-grey darken-3">
                 <div class="card-content white-text">
                     <span class="card-title">Rektors kontor</span>
                     <ul>
@@ -42,12 +41,11 @@
                 </div>
             </div>
         </div>
-        <img src="Billeder/Kort/Rektor.png" width="30%">
     </div>
 
     <div class="command-card" id="studieadmin" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
+            <div class="card blue-grey darken-3">
                 <div class="card-content white-text">
                     <span class="card-title">Studieadministrationen</span>
                     <ul>
@@ -58,7 +56,6 @@
                 </div>
             </div>
         </div>
-        <img src="Billeder/Kort/Studieadministration.png" width="30%">
     </div>
 
     <div class="command-card" id="vrlab" class="row">
@@ -75,7 +72,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/VR-Lab.png" width="30%">
         </div>
 
     <div class="command-card" id="innolab" class="row">
@@ -93,7 +89,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/Innolab.png" width="30%">
         </div>
 
     <div class="command-card" id="f11t18" class="row">
@@ -110,7 +105,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/10erGang.png" width="30%">
         </div>
 
     <div class="command-card" id="f21t25" class="row">
@@ -127,7 +121,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/20erGang.png" width="30%">
         </div>
 
     <div class="command-card" id="f31t32" class="row">
@@ -144,7 +137,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/30erGang.png" width="30%">
         </div>
 
     <div class="command-card" id="f43t45" class="row">
@@ -161,7 +153,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/40erGang.png" width="30%">
         </div>
 
     <div class="command-card" id="f46t50" class="row">
@@ -178,7 +169,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/40erGang.png" width="30%">
         </div>
 
     <div class="command-card" id="f51t54" class="row">
@@ -195,7 +185,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/50erGang.png" width="30%">
         </div>
 
     <div class="command-card" id="f60t63" class="row">
@@ -212,7 +201,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/60erGang.png" width="30%">
         </div>
 
     <div class="command-card" id="proces" class="row">
@@ -229,7 +217,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/NaturvidenskabeligeLokaler.png" width="30%">
         </div>
 
     <div class="command-card" id="teori" class="row">
@@ -246,7 +233,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/NaturvidenskabeligeLokaler.png" width="30%">
         </div>
 
     <div class="command-card" id="biokemi" class="row">
@@ -263,7 +249,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/NaturvidenskabeligeLokaler.png" width="30%">
         </div>
 
     <div class="command-card" id="fysik" class="row">
@@ -280,7 +265,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/NaturvidenskabeligeLokaler.png" width="30%">
         </div>
 
     <div class="command-card" id="printer" class="row">
@@ -297,7 +281,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/Printere.png" width="30%">
         </div>
 
     <div class="command-card" id="bibliotek" class="row">
@@ -314,7 +297,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/Bibliotek.png" width="30%">
         </div>
 
     <div class="command-card" id="teknologi" class="row">
@@ -331,7 +313,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/Teknologi.png" width="30%">
         </div>
 
     <div class="command-card" id="byg" class="row">
@@ -348,7 +329,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/Byg.png" width="30%">
         </div>
 
     <div class="command-card" id="musik" class="row">
@@ -365,12 +345,11 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/Musik.png" width="30%">
         </div>
 
     <div class="command-card" id="kantine" class="row">
             <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
+                <div class="card blue-grey darken-3">
                     <div class="card-content white-text">
                         <span class="card-title">Kantine</span>
                         <ul>
@@ -382,7 +361,6 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/Kantinen.png" width="30%">
         </div>
 
     <div class="command-card" id="nordsal" class="row">
@@ -400,8 +378,30 @@
                     </div>
                 </div>
             </div>
-            <img src="Billeder/Kort/Nordsal.png" width="30%">
         </div>
+
+    <img class="command-map" id="kort-rektor" src="Billeder/Kort/Rektor.png">
+    <img class="command-map" id="kort-studieadmin" src="Billeder/Kort/Studieadministration.png">
+    <img class="command-map" id="kort-vrlab" src="Billeder/Kort/VR-lab.png">
+    <img class="command-map" id="kort-innolab" src="Billeder/Kort/Innolab.png">
+    <img class="command-map" id="kort-f11t18" src="Billeder/Kort/10erGang.png">
+    <img class="command-map" id="kort-f21t25" src="Billeder/Kort/20erGang.png">
+    <img class="command-map" id="kort-f31t32" src="Billeder/Kort/30erGang.png">
+    <img class="command-map" id="kort-f43t45" src="Billeder/Kort/40erGang.png">
+    <img class="command-map" id="kort-f46t50" src="Billeder/Kort/40erGang.png">
+    <img class="command-map" id="kort-f51t54" src="Billeder/Kort/50erGang.png">
+    <img class="command-map" id="kort-f60t63" src="Billeder/Kort/60erGang.png">
+    <img class="command-map" id="kort-proces" src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
+    <img class="command-map" id="kort-teori" src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
+    <img class="command-map" id="kort-biokemi" src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
+    <img class="command-map" id="kort-fysik" src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
+    <img class="command-map" id="kort-printer" src="Billeder/Kort/Printere.png">
+    <img class="command-map" id="kort-bibliotek" src="Billeder/Kort/Bibliotek.png">
+    <img class="command-map" id="kort-teknologi" src="Billeder/Kort/Teknologi.png">
+    <img class="command-map" id="kort-byg" src="Billeder/Kort/Byg.png">
+    <img class="command-map" id="kort-musik" src="Billeder/Kort/Musik.png">
+    <img class="command-map" id="kort-kantine" src="Billeder/Kort/Kantinen.png">
+    <img class="command-map" id="kort-nordsal" src="Billeder/Kort/Nordsal.png">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

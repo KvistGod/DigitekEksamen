@@ -81,13 +81,18 @@ function hideCards() {
     $(".command-card").hide();
 }
 
+function hideMaps() {
+    $(".command-map").hide();
+}
+
 $(document).ready(function () {
 
     var timeLeft;
-    var elem = document.getElementById('some_div');
+    var elem = document.getElementById('maps');
     var timerId = setInterval(countdown, 1000);
 
     hideCards();
+    hideMaps();
 
     document.getElementById("recbutton").onclick = function () {recognition.start()};
 
@@ -100,11 +105,11 @@ $(document).ready(function () {
 
     function countdown() {
         if (timeLeft == 0) {
-            // clearTimeout(timerId);
             hideCards();
-            elem.innerHTML = '';
+            hideMaps();
+            // elem.innerHTML = '';
         } else if (timeLeft > 0) {
-            elem.innerHTML = timeLeft + ' seconds remaining';
+            // elem.innerHTML = timeLeft + ' seconds remaining';
             timeLeft--;
             console.log("nedtælling begyndt: " + timeLeft);
         }
@@ -117,7 +122,8 @@ $(document).ready(function () {
                 if (event.results[0][0].transcript.toLowerCase().includes(k)) {
                     console.log("Keyword: " + Object.keys(e));
                     divName = Object.keys(e);
-                    $("#content").html($("#" + divName).clone().show());
+                    $("#cards").html($("#" + divName).clone().show());
+                    $("#maps").html($("#kort-" + divName).clone().show());
                     timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
                     countdown();
