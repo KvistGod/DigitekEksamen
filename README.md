@@ -8,6 +8,7 @@ For at sætte Raspberry Pien op skal du bruge disse følgende ting:
 2. Et tastatur
 3. En mus
 4. En skærm hvorpå programmet kan vises
+5. Et USB-A han til USB-B han kabel (Printerkabel)
 
 Følgende instruktioner beskriver hvordan Raspberry Pien startes op:
 
