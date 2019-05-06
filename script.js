@@ -87,6 +87,11 @@ function hideMaps() {
 
 $(document).ready(function () {
 
+    // Slå højreklik-menu fra
+    document.oncontextmenu = function () {
+        return false;
+    }
+
     var timeLeft;
     var elem = document.getElementById('maps');
     var timerId = setInterval(countdown, 1000);
