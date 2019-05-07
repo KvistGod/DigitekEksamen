@@ -15,7 +15,7 @@ let commands = [
         "studieadmin": ["studieadministration", "studieadministrationen"]
     },
     {
-        "vrlab": ["vr-lab", "vr lab", "vr lap", "vi er lab"]
+        "vrlab": ["vr-lab", "vr lab", "vr lap", "vi er lab", "vr"]
     },
     {
         "innolab": ["innolab", "inno lab"]
