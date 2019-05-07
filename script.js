@@ -99,7 +99,6 @@ $(document).ready(function () {
     document.getElementById("recbutton").onclick = function () {recognition.start()};
     document.getElementById("initrec").onclick = function () {
         recognition.start()
-        $("#initrec").html("Spadestik");
     };
 
     recognition.onaudiostart = function () {
@@ -118,6 +117,7 @@ $(document).ready(function () {
             // elem.innerHTML = timeLeft + ' seconds remaining';
             timeLeft--;
             console.log("nedtælling begyndt: " + timeLeft);
+            $("#initrec").show();
         }
     }
 
@@ -137,7 +137,6 @@ $(document).ready(function () {
                     $("#recbutton").show();
                 } else {
                     elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
-                    $("#initrec").show();
                 }
             }
         }
