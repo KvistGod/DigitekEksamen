@@ -1,0 +1,16 @@
+#initrec {
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 36%;
+    width: 28%;
+    height: 50%;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.micimage{
+    margin-top:5%; 
+    height: 90%; 
+    width: 50%;
+}

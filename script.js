@@ -76,6 +76,8 @@ let commands = [
     }
 ];
 
+var eksempler = ["Fysiklokalet", "Biblioteket", "Innolab", "VR lab", "Proces"]
+
 // Dansk sprog
 recognition.lang = 'da';
 
@@ -91,12 +93,15 @@ function hideMaps() {
 
 $(document).ready(function () {
 
+
     // Skjul al information
     hideCards();
     hideMaps();
     $("#recbutton").hide();
 
-    document.getElementById("recbutton").onclick = function () {recognition.start()};
+    document.getElementById("recbutton").onclick = function () {
+        recognition.start()
+    };
     document.getElementById("initrec").onclick = function () {
         recognition.start()
     };
@@ -115,19 +120,31 @@ $(document).ready(function () {
 
     // Nedtælling til at kortene forsvinder
     var timeLeft;
+    var example = 0;
     var elem = document.getElementById('maps');
     var timerId = setInterval(countdown, 1000);
+    var timerEx = setInterval(ex, 5000);
+
+    function ex() {
+        $("#eksempel").html(eksempler[example])
+        example++;
+        if (example > 4) {
+            example = 0
+        }
+    }
 
     function countdown() {
         if (timeLeft == 0) {
             hideCards();
             hideMaps();
+            $("#initrec").show();
+            $("#recbutton").hide();
+            $("#introtekst").show();
             // elem.innerHTML = '';
         } else if (timeLeft > 0) {
             // elem.innerHTML = timeLeft + ' seconds remaining';
             timeLeft--;
             console.log("nedtælling begyndt: " + timeLeft);
-            $("#initrec").show();
         }
     }
 
@@ -156,16 +173,17 @@ $(document).ready(function () {
                     // Finder div med samme navn og viser den
                     divName = Object.keys(e);
                     $("#cards").html($("#" + divName).clone().show());
-                    $("#maps").html($("#kort-" + divName).clone().show());
+                    //$("#maps").html($("#kort-" + divName).clone().show());
                     // Starter nedtælling fra 30 sekunder
                     timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
                     countdown();
                     $("#initrec").hide();
-                    $("#recbutton").show();
-                // Hvis der ikke findes et keyword i transcriptet
+                    $("#introtekst").hide();
+                    $(".card-content").append("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large '><img class='micimage' src='billeder/Startskærm/MicrophoneWhite.png'></span>")
+                    // Hvis der ikke findes et keyword i transcriptet
                 } else if (event.results[0][0].transcript.toLowerCase().includes(k) == false) {
-                    elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
+                    //   elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
                 }
             }
         }
