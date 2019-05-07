@@ -1,9 +1,12 @@
+// Kompatibilitet med Chrome-baserede browsere
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
+// Initialiserer objekt
 var recognition = new SpeechRecognition();
 
+// Array med alle keywords
 let commands = [
     {
         "rektor": ["rektor", "rejser", "actor"]
@@ -73,29 +76,26 @@ let commands = [
     }
 ];
 
+// Dansk sprog
 recognition.lang = 'da';
-recognition.continuous = false;
-recognition.interimResults = false;
 
+// Skjul info-kort
 function hideCards() {
     $(".command-card").hide();
 }
 
+// Skjul rutevejledning
 function hideMaps() {
     $(".command-map").hide();
 }
 
 $(document).ready(function () {
 
-    var timeLeft;
-    var elem = document.getElementById('maps');
-    var timerId = setInterval(countdown, 1000);
-
+    // Skjul al information
     hideCards();
     hideMaps();
     $("#recbutton").hide();
 
-    
     document.getElementById("recbutton").onclick = function () {recognition.start()};
     document.getElementById("initrec").onclick = function () {
         recognition.start()
@@ -107,6 +107,16 @@ $(document).ready(function () {
     recognition.onaudioend = function () {
         document.getElementById("recbutton").innerHTML = "Spørg om vej"
     }
+
+    // Slå højreklik-menu fra
+    document.oncontextmenu = function () {
+        return false;
+    }
+
+    // Nedtælling til at kortene forsvinder
+    var timeLeft;
+    var elem = document.getElementById('maps');
+    var timerId = setInterval(countdown, 1000);
 
     function countdown() {
         if (timeLeft == 0) {
@@ -121,21 +131,40 @@ $(document).ready(function () {
         }
     }
 
+    // Starter recognition session ved klik på objekt med id "recbutton"
+    document.getElementById("recbutton").onclick = function () {
+        recognition.start()
+    }
+
+    recognition.onaudiostart = function () {
+        document.getElementById("recbutton").innerHTML = "Lytter...";
+    }
+    recognition.onaudioend = function () {
+        document.getElementById("recbutton").innerHTML = "Spørg om vej"
+    }
+
+    // Ved færdig sætning
     recognition.onresult = function (event) {
         console.log("Transcript: " + event.results[0][0].transcript);
+        // For keyword i array
         for (e of commands) {
+            // For keyword i transcript
             for (k of Object.values(e)[0]) {
+                // Hvis et ord i transcriptet matcher et keyword
                 if (event.results[0][0].transcript.toLowerCase().includes(k)) {
                     console.log("Keyword: " + Object.keys(e));
+                    // Finder div med samme navn og viser den
                     divName = Object.keys(e);
                     $("#cards").html($("#" + divName).clone().show());
                     $("#maps").html($("#kort-" + divName).clone().show());
+                    // Starter nedtælling fra 30 sekunder
                     timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
                     countdown();
                     $("#initrec").hide();
                     $("#recbutton").show();
-                } else {
+                // Hvis der ikke findes et keyword i transcriptet
+                } else if (event.results[0][0].transcript.toLowerCase().includes(k) == false) {
                     elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
                 }
             }
