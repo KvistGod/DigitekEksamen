@@ -93,8 +93,14 @@ $(document).ready(function () {
 
     hideCards();
     hideMaps();
+    $("#recbutton").hide();
 
+    
     document.getElementById("recbutton").onclick = function () {recognition.start()};
+    document.getElementById("initrec").onclick = function () {
+        recognition.start()
+        $("#initrec").html("Spadestik");
+    };
 
     recognition.onaudiostart = function () {
         document.getElementById("recbutton").innerHTML = "Lytter...";
@@ -127,8 +133,11 @@ $(document).ready(function () {
                     timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
                     countdown();
+                    $("#initrec").hide();
+                    $("#recbutton").show();
                 } else {
                     elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
+                    $("#initrec").show();
                 }
             }
         }
