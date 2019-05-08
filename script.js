@@ -99,19 +99,10 @@ $(document).ready(function () {
     hideMaps();
     $("#recbutton").hide();
 
-    document.getElementById("recbutton").onclick = function () {
-        recognition.start()
-    };
     document.getElementById("initrec").onclick = function () {
         recognition.start()
     };
 
-    recognition.onaudiostart = function () {
-        document.getElementById("recbutton").innerHTML = "Lytter...";
-    }
-    recognition.onaudioend = function () {
-        document.getElementById("recbutton").innerHTML = "Spørg om vej"
-    }
 
     // Slå højreklik-menu fra
     document.oncontextmenu = function () {
@@ -151,7 +142,7 @@ $(document).ready(function () {
     // Starter recognition session ved klik på objekt med id "recbutton"
     document.getElementById("recbutton").onclick = function () {
         recognition.start()
-    }
+    };
 
     recognition.onaudiostart = function () {
         document.getElementById("recbutton").innerHTML = "Lytter...";
@@ -175,12 +166,12 @@ $(document).ready(function () {
                     $("#cards").html($("#" + divName).clone().show());
                     //$("#maps").html($("#kort-" + divName).clone().show());
                     // Starter nedtælling fra 30 sekunder
-                    timeLeft = 30;
+                    timeLeft = 3000;
                     console.log("begynder nedtælling: " + timeLeft);
                     countdown();
                     $("#initrec").hide();
                     $("#introtekst").hide();
-                    $(".card-content").append("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large '><img class='micimage' src='billeder/Startskærm/MicrophoneWhite.png'></span>")
+                    $(".card-content").append("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large '><img class='micimage' src='billeder/Startskærm/MicrophoneWhite.png'></span>");
                     // Hvis der ikke findes et keyword i transcriptet
                 } else if (event.results[0][0].transcript.toLowerCase().includes(k) == false) {
                     //   elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
