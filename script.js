@@ -105,7 +105,7 @@ $(document).ready(function () {
 
     // Starter recognition session ved klik på objekt med id "recbutton"
     document.getElementById("recbutton").onclick = function () {
-        console.log("SPURGT")
+        console.log("SPURGT");
         recognition.start();
     };
 
@@ -159,7 +159,7 @@ $(document).ready(function () {
                     $("#cards").html($("#" + divName).clone().show());
                     //$("#maps").html($("#kort-" + divName).clone().show());
                     // Starter nedtælling fra 30 sekunder
-                    timeLeft = 3000;
+                    timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
                     countdown();
                     $("#initrec").hide();
