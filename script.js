@@ -84,6 +84,7 @@ recognition.lang = 'da';
 // Skjul info-kort
 function hideCards() {
     $(".command-card").hide();
+    $(".card-action").html("");
 }
 
 // Skjul rutevejledning
@@ -102,11 +103,6 @@ $(document).ready(function () {
         recognition.start();
     };
 
-
-    // Starter recognition session ved klik på objekt med id "recbutton"
-    document.getElementById("recbutton").onclick = function () {
-        recognition.start();
-    };
 
     // Slå højreklik-menu fra
     document.oncontextmenu = function () {
@@ -133,7 +129,6 @@ $(document).ready(function () {
             hideCards();
             hideMaps();
             $("#initrec").show();
-            $("#recbutton").hide();
             $("#introtekst").show();
             // elem.innerHTML = '';
         } else if (timeLeft > 0) {
@@ -156,6 +151,10 @@ $(document).ready(function () {
                     // Finder div med samme navn og viser den
                     divName = Object.keys(e);
                     $("#cards").html($("#" + divName).clone().show());
+                    $("#cards #" + divName + " .card-action").html("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large'><img class='micimage' src='Billeder/Startskaerm/MicrophoneWhite.png'></span>");
+                    document.getElementById("recbutton").onclick = function () {
+                        recognition.start();
+                    };
                     //$("#maps").html($("#kort-" + divName).clone().show());
                     // Starter nedtælling fra 30 sekunder
                     timeLeft = 30;
