@@ -87,17 +87,11 @@ function hideCards() {
     $(".card-action").html("");
 }
 
-// Skjul rutevejledning
-function hideMaps() {
-    $(".command-map").hide();
-}
-
 $(document).ready(function () {
 
 
     // Skjul al information
     hideCards();
-    hideMaps();
 
     document.getElementById("initrec").onclick = function () {
         recognition.start();
@@ -112,7 +106,6 @@ $(document).ready(function () {
     // Nedtælling til at kortene forsvinder
     var timeLeft;
     var example = 0;
-    var elem = document.getElementById('maps');
     var timerId = setInterval(countdown, 1000);
     var timerEx = setInterval(ex, 5000);
 
@@ -127,12 +120,9 @@ $(document).ready(function () {
     function countdown() {
         if (timeLeft == 0) {
             hideCards();
-            hideMaps();
             $("#initrec").show();
             $("#introtekst").show();
-            // elem.innerHTML = '';
         } else if (timeLeft > 0) {
-            // elem.innerHTML = timeLeft + ' seconds remaining';
             timeLeft--;
             console.log("nedtælling begyndt: " + timeLeft);
         }
@@ -155,7 +145,6 @@ $(document).ready(function () {
                     document.getElementById("recbutton").onclick = function () {
                         recognition.start();
                     };
-                    //$("#maps").html($("#kort-" + divName).clone().show());
                     // Starter nedtælling fra 30 sekunder
                     timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
