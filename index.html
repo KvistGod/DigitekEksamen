@@ -15,33 +15,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: #ff4800">
+<body>
 
-    <h1 style="text-align: center; font-size: 500%">Raspby</h1>
+    <h1>Raspy</h1>
     <div id="introtekst">
-        <p style="text-align: center; font-size: 200%">Tryk på knappen og sig hvor du vil hen</p>
-        <p  style="text-align: center; font-size: 200%">Vi kan for ekempel vise vej til: <span id="eksempel"></span></p>
+        <p>Tryk på knappen og sig hvor du vil hen</p>
+        <p>Vi kan for ekempel vise vej til: <span id="eksempel"></span></p>
     </div>
-    <span id="initrec" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="billeder/Startskærm/MicrophoneWhite.png"></span>
-    <div id="initRec" style="text-align: center;"></div>
+    <span id="initrec" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></span>
     <div class="container">
         <div id="maps"></div>
         <div id="cards"></div>
-        <a class="waves-effect waves-light btn-large blue-grey darken-3" id="recbutton">Spørg mig om vej</a>
     </div>
 
 
     <div class="command-card" id="rektor" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-3">
-                <div class="card-content white-text">
-                    <span class="card-title">Rektors kontor</span>
-                    <ul>
-                        <li>Kan findes ved indgangen fra udendørsarealerne nær sydsalen</li>
-                        <li>På døren til Rektors kontor vises det om Rektor er ledig</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Rektors kontor.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Rektor.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Rektors kontor</span>
+                        <ul>
+                            <li>Kan findes ved indgangen fra udendørsarealerne nær sydsalen</li>
+                            <li>På døren til Rektors kontor vises det om Rektor er ledig</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Rektors kontor.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></span></div>
                 </div>
             </div>
         </div>
@@ -49,14 +53,20 @@
 
     <div class="command-card" id="studieadmin" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-3">
-                <div class="card-content white-text">
-                    <span class="card-title">Studieadministrationen</span>
-                    <ul>
-                        <li>Kan findes i Sydsalen/Kantinen ved siden af indgangen til lærerværelset</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Studieadministrationen.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Studieadministration.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Studieadministrationen</span>
+                        <ul>
+                            <li>Kan findes i Sydsalen/Kantinen ved siden af indgangen til lærerværelset</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Studieadministrationen.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -64,15 +74,21 @@
 
     <div class="command-card" id="vrlab" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">VR-Lab</span>
-                    <ul>
-                        <li>Kan findes ved siden af Nordsalen nær lokale 31 og 32.</li>
-                        <li>Intet krav om at booke lokalet - Du kan bare gå ind</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde VR-Lab.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/VR-Lab.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">VR-Lab</span>
+                        <ul>
+                            <li>Kan findes ved siden af Nordsalen nær lokale 31 og 32.</li>
+                            <li>Intet krav om at booke lokalet - Du kan bare gå ind</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde VR-Lab.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -80,16 +96,22 @@
 
     <div class="command-card" id="innolab" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Innolab</span>
-                    <ul>
-                        <li>Kan findes over for Nordsalen</li>
-                        <li>Innolab 1, 2 og 3 findes ved siden af hinanden</li>
-                        <li>3D Printerne kan desuden findes ved Innolab 1</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde VR-Lab.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Innolab.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Innolab</span>
+                        <ul>
+                            <li>Kan findes over for Nordsalen</li>
+                            <li>Innolab 1, 2 og 3 findes ved siden af hinanden</li>
+                            <li>3D Printerne kan desuden findes ved Innolab 1</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde VR-Lab.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -97,15 +119,21 @@
 
     <div class="command-card" id="f11t18" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Lokale 11-18</span>
-                    <ul>
-                        <li>Kan findes i stueetagen nær hovedindgangen</li>
-                        <li>Numre på lokaler kan findes på dørene</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 11-18.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/10erGang.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Lokale 11-18</span>
+                        <ul>
+                            <li>Kan findes i stueetagen nær hovedindgangen</li>
+                            <li>Numre på lokaler kan findes på dørene</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 11-18.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -113,15 +141,21 @@
 
     <div class="command-card" id="f21t25" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Lokale 21-25</span>
-                    <ul>
-                        <li>Kan findes på 1. sal ved at gå op af trappen nær hovedindgangen</li>
-                        <li>Numre på lokaler kan findes på dørene</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 21-25.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/20erGang.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Lokale 21-25</span>
+                        <ul>
+                            <li>Kan findes på 1. sal ved at gå op af trappen nær hovedindgangen</li>
+                            <li>Numre på lokaler kan findes på dørene</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 21-25.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -129,15 +163,21 @@
 
     <div class="command-card" id="f31t32" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Lokale 31-32</span>
-                    <ul>
-                        <li>Kan findes over for VR-Lab og Nordsalen.</li>
-                        <li>Numre på lokaler kan findes på dørene</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 31-32.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/30erGang.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Lokale 31-32</span>
+                        <ul>
+                            <li>Kan findes over for VR-Lab og Nordsalen.</li>
+                            <li>Numre på lokaler kan findes på dørene</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 31-32.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -145,15 +185,21 @@
 
     <div class="command-card" id="f43t45" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Lokale 43-45</span>
-                    <ul>
-                        <li>Kan findes i Sydsalen/Kantinen</li>
-                        <li>Numre på lokaler kan findes på dørene</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 43-45.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/40erGang.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Lokale 43-45</span>
+                        <ul>
+                            <li>Kan findes i Sydsalen/Kantinen</li>
+                            <li>Numre på lokaler kan findes på dørene</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 43-45.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -161,15 +207,21 @@
 
     <div class="command-card" id="f46t50" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Lokale 46-50</span>
-                    <ul>
-                        <li>Kan findes i den sydlige ende af Sydsalen/Kantinen</li>
-                        <li>Numre på lokaler kan findes på dørene</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 46-50.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/40erGang.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Lokale 46-50</span>
+                        <ul>
+                            <li>Kan findes i den sydlige ende af Sydsalen/Kantinen</li>
+                            <li>Numre på lokaler kan findes på dørene</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 46-50.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -177,15 +229,21 @@
 
     <div class="command-card" id="f51t54" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Lokale 51-54</span>
-                    <ul>
-                        <li>Kan findes i den sydvestlige ende af Sydsalen/Kantinen</li>
-                        <li>Numre på lokaler kan findes på dørene</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 51-54.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/50erGang.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Lokale 51-54</span>
+                        <ul>
+                            <li>Kan findes i den sydvestlige ende af Sydsalen/Kantinen</li>
+                            <li>Numre på lokaler kan findes på dørene</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 51-54.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -193,15 +251,21 @@
 
     <div class="command-card" id="f60t63" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Lokale 60-63</span>
-                    <ul>
-                        <li>Kan findes i den østlige ende af skolen</li>
-                        <li>Numre på lokaler kan findes på dørene</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 60-63.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/60erGang.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Lokale 60-63</span>
+                        <ul>
+                            <li>Kan findes i den østlige ende af skolen</li>
+                            <li>Numre på lokaler kan findes på dørene</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde lokale 60-63.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -209,15 +273,21 @@
 
     <div class="command-card" id="proces" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Proces</span>
-                    <ul>
-                        <li>Kan findes på 1. sal</li>
-                        <li>Lokale nr. 4 fra indgangen til det naturvidenskabelige område</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Proces lokalet.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Proces</span>
+                        <ul>
+                            <li>Kan findes på 1. sal</li>
+                            <li>Lokale nr. 4 fra indgangen til det naturvidenskabelige område</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Proces lokalet.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -225,15 +295,21 @@
 
     <div class="command-card" id="teori" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Teori</span>
-                    <ul>
-                        <li>Kan findes på 1. sal</li>
-                        <li>Lokale nr. 3 fra indgangen til det naturvidenskabelige område</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Teori lokalet.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Teori</span>
+                        <ul>
+                            <li>Kan findes på 1. sal</li>
+                            <li>Lokale nr. 3 fra indgangen til det naturvidenskabelige område</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Teori lokalet.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -241,15 +317,21 @@
 
     <div class="command-card" id="biokemi" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Biokemi</span>
-                    <ul>
-                        <li>Kan findes på 1. sal</li>
-                        <li>Lokale nr. 2 fra indgangen til det naturvidenskabelige område</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Biokemi lokalet.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Biokemi</span>
+                        <ul>
+                            <li>Kan findes på 1. sal</li>
+                            <li>Lokale nr. 2 fra indgangen til det naturvidenskabelige område</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Biokemi lokalet.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -257,15 +339,21 @@
 
     <div class="command-card" id="fysik" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Fysik</span>
-                    <ul>
-                        <li>Kan findes på 1. sal</li>
-                        <li>Lokale nr. 1 fra indgangen til det naturvidenskabelige område</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Fysik lokalet.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Fysik</span>
+                        <ul>
+                            <li>Kan findes på 1. sal</li>
+                            <li>Lokale nr. 1 fra indgangen til det naturvidenskabelige område</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Fysik lokalet.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -273,15 +361,21 @@
 
     <div class="command-card" id="printer" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Printere</span>
-                    <ul>
-                        <li>Kan findes i Sydsalen mellem lokale 53 og 51</li>
-                        <li>Instruktioner til brug af printerne kan findes ovenover printerne</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde printerne.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Printere.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Printere</span>
+                        <ul>
+                            <li>Kan findes i Sydsalen mellem lokale 53 og 51</li>
+                            <li>Instruktioner til brug af printerne kan findes ovenover printerne</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde printerne.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -289,15 +383,21 @@
 
     <div class="command-card" id="bibliotek" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Bibliotek</span>
-                    <ul>
-                        <li>Kan findes i kælderen overfor Teknologi lokalet</li>
-                        <li>Åbningstider kan variere, men biblioteket er som oftest åbent</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde biblioteket.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Bibliotek.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Bibliotek</span>
+                        <ul>
+                            <li>Kan findes i kælderen overfor Teknologi lokalet</li>
+                            <li>Åbningstider kan variere, men biblioteket er som oftest åbent</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde biblioteket.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -307,7 +407,7 @@
         <div class="col s12 m6">
             <div class="card horizontal blue-grey darken-1">
                 <div class="card-image">
-                    <img src="billeder/Kort/Teknologi.png">
+                    <img src="Billeder/Kort/Teknologi.png">
                 </div>
                 <div class="card-stacked">
                     <div class="card-content white-text">
@@ -319,7 +419,7 @@
                         <p>Kortet nedenfor viser den rute du skal tage for at finde Teknologi lokalet.</p>
                         <p>Du befinder dig ved den røde prik.</p>
                     </div>
-                    <div class="card-action"></div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -328,15 +428,21 @@
 
     <div class="command-card" id="byg" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Byg</span>
-                    <ul>
-                        <li>Kan findes i kælderen ved trappen op til hovedindgangen</li>
-                        <li>Lokalet er normalt låst, og skal derfor låses op af en lærer</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Byg lokalet.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Byg.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Byg</span>
+                        <ul>
+                            <li>Kan findes i kælderen ved trappen op til hovedindgangen</li>
+                            <li>Lokalet er normalt låst, og skal derfor låses op af en lærer</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Byg lokalet.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -344,15 +450,21 @@
 
     <div class="command-card" id="musik" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Musik</span>
-                    <ul>
-                        <li>Kan findes i kælderen ved siden af biblioteket</li>
-                        <li>Lokalet er normalt låst, og skal derfor låses op af en lærer</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Musik lokalet.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Musik.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Musik</span>
+                        <ul>
+                            <li>Kan findes i kælderen ved siden af biblioteket</li>
+                            <li>Lokalet er normalt låst, og skal derfor låses op af en lærer</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Musik lokalet.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -360,15 +472,21 @@
 
     <div class="command-card" id="kantine" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-3">
-                <div class="card-content white-text">
-                    <span class="card-title">Kantine</span>
-                    <ul>
-                        <li>Kan findes i indgangen til Sydsalen</li>
-                        <li>Kantinen er åben fra 8:00 til 14:45</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Kantinen.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Kantinen.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Kantine</span>
+                        <ul>
+                            <li>Kan findes i indgangen til Sydsalen</li>
+                            <li>Kantinen er åben fra 8:00 til 14:45</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Kantinen.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
@@ -376,43 +494,26 @@
 
     <div class="command-card" id="nordsal" class="row">
         <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Nordsal</span>
-                    <ul>
-                        <li>Nordsal 1 & 2 kan findes til højre for indgangen fra Lundemarksvej</li>
-                        <li>Nordsal 1 bliver sommetider brugt til at afholde fordrag</li>
-                        <li>Nordsal 2 bliver ofte brugt til undervisning</li>
-                    </ul>
-                    <p>Kortet nedenfor viser den rute du skal tage for at finde Nordsal 1 & 2.</p>
-                    <p>Du befinder dig ved den røde prik.</p>
+            <div class="card horizontal blue-grey darken-1">
+                <div class="card-image">
+                    <img src="Billeder/Kort/Nordsal.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text">
+                        <span class="card-title">Nordsal</span>
+                        <ul>
+                            <li>Nordsal 1 & 2 kan findes til højre for indgangen fra Lundemarksvej</li>
+                            <li>Nordsal 1 bliver sommetider brugt til at afholde fordrag</li>
+                            <li>Nordsal 2 bliver ofte brugt til undervisning</li>
+                        </ul>
+                        <p>Kortet nedenfor viser den rute du skal tage for at finde Nordsal 1 & 2.</p>
+                        <p>Du befinder dig ved den røde prik.</p>
+                    </div>
+                    <div class="card-action"><span id="recbutton" class="dot waves-effect blue-grey darken-3 waves-light btn-large"><img class="micimage" src="Billeder/Startskaerm/MicrophoneWhite.png"></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <img class="command-map" id="kort-rektor" src="Billeder/Kort/Rektor.png">
-    <img class="command-map" id="kort-studieadmin" src="Billeder/Kort/Studieadministration.png">
-    <img class="command-map" id="kort-vrlab" src="Billeder/Kort/VR-lab.png">
-    <img class="command-map" id="kort-innolab" src="Billeder/Kort/Innolab.png">
-    <img class="command-map" id="kort-f11t18" src="Billeder/Kort/10erGang.png">
-    <img class="command-map" id="kort-f21t25" src="Billeder/Kort/20erGang.png">
-    <img class="command-map" id="kort-f31t32" src="Billeder/Kort/30erGang.png">
-    <img class="command-map" id="kort-f43t45" src="Billeder/Kort/40erGang.png">
-    <img class="command-map" id="kort-f46t50" src="Billeder/Kort/40erGang.png">
-    <img class="command-map" id="kort-f51t54" src="Billeder/Kort/50erGang.png">
-    <img class="command-map" id="kort-f60t63" src="Billeder/Kort/60erGang.png">
-    <img class="command-map" id="kort-proces" src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
-    <img class="command-map" id="kort-teori" src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
-    <img class="command-map" id="kort-biokemi" src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
-    <img class="command-map" id="kort-fysik" src="Billeder/Kort/NaturvidenskabeligeLokaler.png">
-    <img class="command-map" id="kort-printer" src="Billeder/Kort/Printere.png">
-    <img class="command-map" id="kort-bibliotek" src="Billeder/Kort/Bibliotek.png">
-    <img class="command-map" id="kort-teknologi" src="Billeder/Kort/Teknologi.png">
-    <img class="command-map" id="kort-byg" src="Billeder/Kort/Byg.png">
-    <img class="command-map" id="kort-musik" src="Billeder/Kort/Musik.png">
-    <img class="command-map" id="kort-kantine" src="Billeder/Kort/Kantinen.png">
-    <img class="command-map" id="kort-nordsal" src="Billeder/Kort/Nordsal.png">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

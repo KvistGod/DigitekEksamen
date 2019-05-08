@@ -97,21 +97,16 @@ $(document).ready(function () {
     // Skjul al information
     hideCards();
     hideMaps();
-    $("#recbutton").hide();
 
-    document.getElementById("recbutton").onclick = function () {
-        recognition.start()
-    };
     document.getElementById("initrec").onclick = function () {
-        recognition.start()
+        recognition.start();
     };
 
-    recognition.onaudiostart = function () {
-        document.getElementById("recbutton").innerHTML = "Lytter...";
-    }
-    recognition.onaudioend = function () {
-        document.getElementById("recbutton").innerHTML = "Spørg om vej"
-    }
+
+    // Starter recognition session ved klik på objekt med id "recbutton"
+    document.getElementById("recbutton").onclick = function () {
+        recognition.start();
+    };
 
     // Slå højreklik-menu fra
     document.oncontextmenu = function () {
@@ -148,18 +143,6 @@ $(document).ready(function () {
         }
     }
 
-    // Starter recognition session ved klik på objekt med id "recbutton"
-    document.getElementById("recbutton").onclick = function () {
-        recognition.start()
-    }
-
-    recognition.onaudiostart = function () {
-        document.getElementById("recbutton").innerHTML = "Lytter...";
-    }
-    recognition.onaudioend = function () {
-        document.getElementById("recbutton").innerHTML = "Spørg om vej"
-    }
-
     // Ved færdig sætning
     recognition.onresult = function (event) {
         console.log("Transcript: " + event.results[0][0].transcript);
@@ -180,7 +163,6 @@ $(document).ready(function () {
                     countdown();
                     $("#initrec").hide();
                     $("#introtekst").hide();
-                    $(".card-content").append("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large '><img class='micimage' src='billeder/Startskærm/MicrophoneWhite.png'></span>")
                     // Hvis der ikke findes et keyword i transcriptet
                 } else if (event.results[0][0].transcript.toLowerCase().includes(k) == false) {
                     //   elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";

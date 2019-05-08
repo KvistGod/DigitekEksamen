@@ -1,3 +1,19 @@
+body {
+    background-color: #ff4800;
+}
+
+h1 {
+    text-align: center;
+    font-size: 500%;
+    color: #fff;
+}
+
+#introtekst p {
+    text-align: center;
+    font-size: 200%;
+    color: #fff;
+}
+
 #initrec {
     text-align: center;
     position: fixed;
@@ -10,7 +26,21 @@
 }
 
 .micimage{
-    margin-top:5%; 
-    height: 90%; 
+    margin-top:5%;
+    height: 90%;
     width: 50%;
+}
+
+#recbutton {
+    text-align: center;
+    margin-bottom: 10%;
+    left: 30%;
+    width: 40%;
+    height: 80%;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.card-content{
+    max-height: 60%;
 }
