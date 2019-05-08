@@ -171,7 +171,7 @@ $(document).ready(function () {
                     countdown();
                     $("#initrec").hide();
                     $("#introtekst").hide();
-                    $(".card-content").append("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large '><img class='micimage' src='billeder/Startskærm/MicrophoneWhite.png'></span>");
+                    $(".card-content").append("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large '><img class='micimage' src='Billeder/Startskærm/MicrophoneWhite.png'></span>");
                     // Hvis der ikke findes et keyword i transcriptet
                 } else if (event.results[0][0].transcript.toLowerCase().includes(k) == false) {
                     //   elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
