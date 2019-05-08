@@ -14,21 +14,23 @@ h1 {
     color: #fff;
 }
 
+.center-align {
+    text-align: center;
+}
+
 #initrec {
     text-align: center;
-    position: fixed;
-    top: 40%;
-    left: 36%;
-    width: 28%;
-    height: 50%;
+    margin-top: 7%;
+    width: 14%;
+    height: 25%;
     border-radius: 100%;
     display: inline-block;
 }
 
 .micimage{
-    margin-top:5%;
-    height: 90%;
-    width: 50%;
+    margin-top: 14%;
+    height: 80%;
+    width: 57%;
 }
 
 #recbutton {
