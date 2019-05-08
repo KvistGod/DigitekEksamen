@@ -97,12 +97,17 @@ $(document).ready(function () {
     // Skjul al information
     hideCards();
     hideMaps();
-    $("#recbutton").hide();
 
     document.getElementById("initrec").onclick = function () {
-        recognition.start()
+        recognition.start();
     };
 
+
+    // Starter recognition session ved klik på objekt med id "recbutton"
+    document.getElementById("recbutton").onclick = function () {
+        console.log("SPURGT")
+        recognition.start();
+    };
 
     // Slå højreklik-menu fra
     document.oncontextmenu = function () {
@@ -137,18 +142,6 @@ $(document).ready(function () {
             timeLeft--;
             console.log("nedtælling begyndt: " + timeLeft);
         }
-    }
-
-    // Starter recognition session ved klik på objekt med id "recbutton"
-    document.getElementById("recbutton").onclick = function () {
-        recognition.start()
-    };
-
-    recognition.onaudiostart = function () {
-        document.getElementById("recbutton").innerHTML = "Lytter...";
-    }
-    recognition.onaudioend = function () {
-        document.getElementById("recbutton").innerHTML = "Spørg om vej"
     }
 
     // Ved færdig sætning
