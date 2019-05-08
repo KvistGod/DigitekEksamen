@@ -1,45 +1,66 @@
-# Manual til Den Talende Infoskærm
+# Manual til Raspy
 
-## Setup af Raspberry Pi
+## Opsætning
 
-For at sætte Raspberry Pien op skal du bruge disse følgende ting:
+For at sætte Raspberry Pien op skal du bruge følgende:
 
-1. Et HDMI kabel
-2. Et tastatur
-3. En mus
-4. En skærm hvorpå programmet kan vises
-5. Et USB-A han til USB-B han kabel (Printerkabel)
+- Et HDMI-kabel
+- Et LAN-kabel
+- Et tastatur
+- En mus
+- En touchskærm
+- Et "USB-A han til USB-B han"-kabel (printerkabel)
 
 Følgende instruktioner beskriver hvordan Raspberry Pien startes op:
 
-1. Indsæt SD-kortet i den rette indgang på Raspbery Pien.
-2. Indsæt HDMI kablet.
-3. Indsæt USB kabler til tastatur og mus.
-4. Indsæt strømkabelet - Raspberry Pien vil nu tænde.
+1. Indsæt LAN-kabel i Raspberry Pi
+2. Tilslut skærm og Raspberry Pi med HDMI-kabel
+3. Tilslut skærm og Raspberry Pi med USB-kabel
+4. Tilslut mus og tastatur
+5. Indsæt strømkabel
+6. Når login-skærmen vises indtastes brugernavn **pi** og adgangskode **rasp314**
+7. Tryk <kbd>CTRL</kbd> + <kbd>R</kbd> for at genindlæse siden
 
-## Setup af Stemmegenkendelse
+### Sluk Raspberry Pien
 
-Følgende instruktioner beskriver hvordan stemmegenkendelsen sættes op på Raspberry Pien:
+1. Tilslut mus og tastatur
+2. Tryk <kbd>ALT</kbd> + <kbd>F4</kbd>
+3. Tryk på sluk-ikonet oppe i højre hjørne
+4. Tryk "Luk ned"
 
 ## Brug af programmet
 
-Programmet fungerer via stemmeinput. Der er hardcoded forskellige kommandoer, som giver forskellige resultater. Programmet understøtter følgende kommandoer:
+Programmet bruges vha. touch- og stemmeinput. Efter at have trykket på mikrofon-ikonet kan man spørge om vej til skolens lokaler. Information om og rutevejledning til lokalet vises derefter i 30 sekunder.
 
-|         Kommando         |                        Resultat                        |
-|:------------------------:|:------------------------------------------------------:|
-|     "Rektors kontor"     | Viser vej til Rektors kontor                           |
-| "Studieadministrationen" | Viser vej til Studieadministrationen                   |
-|         "VR Lab"         | Viser vej til VR Lab                                   |
-|         "Innolab"        | Viser vej til Innolab 1, Innolab 2 og Innolab 3        |
-|         "Process"        | Viser vej til Process lokalet (kaldes også Lokale 74)  |
-|          "Teori"         | Viser vej til Teori lokalet (kaldes også Lokale 73)    |
-|        "Bio Kemi"        | Viser vej til Bio Kemi lokalet (kaldes også lokale 72) |
-|          "Fysik"         | Viser vej til Fysik lokalet (kaldes også Lokale 71)    |
-|        "Printere"        | Viser vej til Printerne                                |
-|        "Bibliotek"       | Viser vej til Biblioteket                              |
-|       "Tekonologi"       | Viser vej til Teknologi lokalet                        |
-|           "Byg"          | Viser vej til Byg lokalet                              |
-|          "Musik"         | Viser vej til Musiklokalet                             |
-|        "Kantinen"        | Viser vej til Kantinen                                 |
+Man kan spørge efter følgende lokaler:
 
-Programmet understøttter derudover navnene på alle klasselokalerne. Siger man fx "Lokale 62", vil man blive ledt til 60'er gangen, hvor lokale 62 kan findes.
+**Faglokaler**
+- VR-lab
+- Innolab
+- Proces
+- Teori
+- Biokemi
+- Fysik
+- Teknologi
+- Byg
+- Musik
+
+**Klasselokaler**
+- Lokale 11-18
+- Lokale 21-25
+- Lokale 31 & 32
+- Lokale 43-45
+- Lokale 46-50
+- Lokale 51-54
+- Lokale 60-63
+
+**Andre lokaler**
+- Rektors kontor
+- Studieadministrationen
+- Studievejleders kontor
+- Biblioteket
+- Nordsalene
+- Kantinen
+- Printere
+- 3D-printere
+- Toiletter
