@@ -105,7 +105,6 @@ $(document).ready(function () {
 
     // Starter recognition session ved klik på objekt med id "recbutton"
     document.getElementById("recbutton").onclick = function () {
-        console.log("SPURGT");
         recognition.start();
     };
 
