@@ -85,6 +85,7 @@ recognition.lang = 'da';
 function hideCards() {
     $(".command-card").hide();
     $(".card-action").html("");
+    $(".problem").hide();
 }
 
 $(document).ready(function () {
@@ -105,6 +106,7 @@ $(document).ready(function () {
 
     // Nedtælling til at kortene forsvinder
     var timeLeft;
+    var tjek = $("#cards").html();
     var example = 0;
     var timerId = setInterval(countdown, 1000);
     var timerEx = setInterval(ex, 5000);
@@ -140,6 +142,8 @@ $(document).ready(function () {
                     console.log("Keyword: " + Object.keys(e));
                     // Finder div med samme navn og viser den
                     divName = Object.keys(e);
+                    tjek = $("#cards").html();
+                    console.log(tjek)
                     $("#cards").html($("#" + divName).clone().show());
                     $("#cards #" + divName + " .card-action").html("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large'><img class='micimage' src='Billeder/Startskaerm/MicrophoneWhite.png'></span>");
                     document.getElementById("recbutton").onclick = function () {
@@ -149,13 +153,15 @@ $(document).ready(function () {
                     timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
                     countdown();
+                    $(".problem").hide();
                     $("#initrec").hide();
                     $("#introtekst").hide();
                     // Hvis der ikke findes et keyword i transcriptet
-                } else if (event.results[0][0].transcript.toLowerCase().includes(k) == false) {
-                    //   elem.innerHTML = "Jeg kunne desværre ikke forstå, hvad du sagde. Prøv igen!";
+                } else 
+                    if (tjek == $("#cards").html()) {
+                        $(".problem").show();
                 }
             }
-        }
+                       }
     }
 });
