@@ -87,6 +87,14 @@ function hideCards() {
     $(".card-action").html("");
 }
 
+// Visuel feedback ved lydinput
+recognition.onaudiostart = function() {
+    $(".btn-large").addClass("pulse");
+}
+recognition.onaudioend = function() {
+    $(".btn-large").removeClass("pulse");
+}
+
 $(document).ready(function () {
 
 
