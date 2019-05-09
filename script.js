@@ -87,13 +87,19 @@ function hideCards() {
     $(".card-action").html("");
     $(".problem").hide();
 }
+    var countdown;
+
+    function wrong() {
+        $(".problem").hide();
+    }
 
 // Visuel feedback ved lydinput
-recognition.onaudiostart = function() {
+recognition.onaudiostart = function () {
     $(".btn-large").addClass("pulse");
 }
-recognition.onaudioend = function() {
+recognition.onaudioend = function () {
     $(".btn-large").removeClass("pulse");
+    countdown=setTimeout(wrong,5000);
 }
 
 $(document).ready(function () {
@@ -127,6 +133,7 @@ $(document).ready(function () {
         }
     }
 
+
     function countdown() {
         if (timeLeft == 0) {
             hideCards();
@@ -151,7 +158,6 @@ $(document).ready(function () {
                     // Finder div med samme navn og viser den
                     divName = Object.keys(e);
                     tjek = $("#cards").html();
-                    console.log(tjek)
                     $("#cards").html($("#" + divName).clone().show());
                     $("#cards #" + divName + " .card-action").html("<span id='recbutton' class='dot waves-effect blue-grey darken-3 waves-light btn-large'><img class='micimage' src='Billeder/Startskaerm/MicrophoneWhite.png'></span>");
                     document.getElementById("recbutton").onclick = function () {
@@ -160,16 +166,16 @@ $(document).ready(function () {
                     // Starter nedtælling fra 30 sekunder
                     timeLeft = 30;
                     console.log("begynder nedtælling: " + timeLeft);
-                    countdown();
                     $(".problem").hide();
                     $("#initrec").hide();
                     $("#introtekst").hide();
                     // Hvis der ikke findes et keyword i transcriptet
-                } else 
-                    if (tjek == $("#cards").html()) {
-                        $(".problem").show();
+                } else if (tjek == $("#cards").html()) {
+                    $(".problem").show();
                 }
             }
-                       }
+        }
     }
+   
+    
 });
