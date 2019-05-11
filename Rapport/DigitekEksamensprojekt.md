@@ -5,6 +5,7 @@ date: 13-05-2019
 titlepage: true
 toc: true
 toc-title: Indholdsfortegnelse
+numbersections: true
 lang: da
 csl: apa.csl
 bibliography: digitek.bib
