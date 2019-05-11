@@ -42,16 +42,16 @@ let commands = [
         "f60t63": ["60", "61", "62", "63"]
     },
     {
-        "proces": ["proces", "process", "prosa", "protest"]
+        "proces": ["proces", "process", "prosa", "protest", "74"]
     },
     {
-        "teori": ["teori"]
+        "teori": ["teori", "design", "73"]
     },
     {
-        "biokemi": ["biokemi"]
+        "biokemi": ["biokemi", "kemi", "72"]
     },
     {
-        "fysik": ["fysik"]
+        "fysik": ["fysik", "71"]
     },
     {
         "printer": ["print", "printe", "printer", "printeren", "printere", "printerne"]
