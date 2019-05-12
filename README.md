@@ -1,4 +1,4 @@
-# Manual til Raspy
+# Manual til Den Talende Infoskærm
 
 ## Opsætning
 
