@@ -2,9 +2,6 @@
 title: Den Talende Infoskærm
 author: Bjarke, Jasper, Julius Westmann & Noah
 date: 13-05-2019
-titlepage: true
-toc: true
-toc-title: Indholdsfortegnelse
 numbersections: true
 lang: da
 csl: apa.csl
@@ -12,6 +9,16 @@ bibliography: digitek.bib
 nocite: |
     @*
 ...
+\begin{titlepage}
+
+\includegraphics{../Billeder/Forside.jpg}
+
+\end{titlepage}
+
+![](../Billeder/NulSnyd.jpg)
+
+\renewcommand*\contentsname{Indholdsfortegnelse}
+\tableofcontents
 
 \newpage
 
@@ -256,7 +263,7 @@ Der er mange fordele ved at benytte CSS til at designe sin hjemmeside:
 
 Det er i disse dage vigtigt at have kendskab til CSS når man skal udvikle en hjemmeside, eftersom det er den hurtigste og mest effektive måde at designe en hjemmeside på. Hjemmesider der ikke gør brug af CSS indlæser ofte langsomt og ligner mest af alt noget der blev designet i internettets tidlige dage.
 
-#### Materialize CSS
+### Materialize CSS
 
 Materialize CSS er et framework lavet af et hold fra Carnegie Mellon University i 2014. Det giver en lettere måde at få ens hjemmeside til at se godt ud, ved at følge material design, som er et designsprog lavet af Google, med formålet at samle klassiske design principper med nyt teknologi. Formålet med Material Design er tre forskellige ting:
 
@@ -377,6 +384,8 @@ Vi sikrede os at der ikke var nogle problemer med designet, og gik i gang med vo
 
 ![](../Billeder/3D-Print.png)
 
+\newpage
+
 ### Konstruktion i træ
 
 Da vi ikke var i stand til at 3D-Printe vores holder, valgte vi i stedet at lave holderen ud af træ. Da vi tidligere havde arbejdet i træ i forbindelse med projekter i andre fag, kendte vi allerede til hvordan man arbejder i træ, og hvilke muligheder der findes i forbindelse med udarbejdelsen af en konstruktion i træ.
@@ -482,6 +491,8 @@ Skærmen har en lys, orange baggrund, med en mørkeblå farve for kortet og knap
 Vores endelige brugerflade er meget lig vores mockup, i forhold til den information som brugeren får.
 
 ![](../Billeder/Mockup.png){ width=50% }
+
+\newpage
 
 En stor forskel er at vores mockup prøvede at give fornemmelsen af, at det er en person man snakker med, når man benytter vores produkt. Dette var en inspiration fra stemmegenkendelses systemer såsom Siri og Alexa. Vi endte dog med at ændre teksten til noget mere neutralt, da vi ikke mente at vores produkt var komplekst nok til at give illusionen af en personlighed.
 Forskellen mellem vores endelige brugerflade og vores udkast er ikke særlig stor. Vi har gjort mikrofonen hvid, og lavet det om til en knap og omskrevet hvad der stod. Desuden har vi gjort skriftens farve til hvid, og gjort den orange baggrund lysere. Vi har også ændret på tekstens størrelse, så den bedre kan læses af brugeren.
