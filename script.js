@@ -87,11 +87,11 @@ function hideCards() {
     $(".card-action").html("");
     $(".problem").hide();
 }
-    var countdown;
+var countdown;
 
-    function wrong() {
-        $(".problem").hide();
-    }
+function wrong() {
+    $(".problem").hide();
+}
 
 // Visuel feedback ved lydinput
 recognition.onaudiostart = function () {
@@ -99,7 +99,7 @@ recognition.onaudiostart = function () {
 }
 recognition.onaudioend = function () {
     $(".btn-large").removeClass("pulse");
-    countdown=setTimeout(wrong,5000);
+    countdown = setTimeout(wrong, 5000);
 }
 
 $(document).ready(function () {
@@ -176,6 +176,4 @@ $(document).ready(function () {
             }
         }
     }
-   
-    
 });
